@@ -1,0 +1,19 @@
+---
+import { ReactNode } from "react";
+
+export interface cardprops{
+  title:string;
+  body:string;
+  imgUrl?:ReactNode;
+
+}
+
+const {title,body,imgUrl} = Astro.props as cardprops 
+---
+
+<div class='text-left mb-10 mx-4 p-4 shadow-sm shadow-cyan-500/100 rounded-md'> 
+   <div class="mb-6">{imgUrl}</div>
+   <h3 class='font-extrabold mb-[-0.5rem]'>{title}</h3> 
+   <p class='max-w-[350px] space-between'>{body}</p>
+
+</div>

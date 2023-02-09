@@ -1,0 +1,51 @@
+---
+import logo from '../images/logo.svg'
+---
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/" class="flex items-end " >
+        <img src={logo} alt="logo" class=' font-[1000] scale-y-[0.85] text-xl  bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent'/>
+        <span class=' font-[1000] ml-1 scale-y-[0.85] text-xl  bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent'>Phil-tech </span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/tech">Tech</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+  height: 70px;
+  background: var(--color-primary);
+}
+.logo_words{
+  
+}
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.header img {
+  height: 35px;
+  vertical-align: middle;
+}
+.header nav ul {
+  display: flex;
+}
+.header nav ul li {
+  padding: 0 10px;
+}
+.header nav ul li a {
+  color: #fff;
+}
+</style>
