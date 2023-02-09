@@ -1,6 +1,4 @@
 ---
-import logos from '../images/framework-logos.png';
-import logosSmall from '../images/framework-logos-small.png';
 export interface Props {
   heading?: string;
   text?: string;
@@ -24,17 +22,6 @@ const {
       >learn more</button
     >
   </div>
-
-  {
-    showExtra && (
-      <>
-        <div class="showcase-img">
-          <img class="logos" src={logos} alt="" />
-          <img class="logos-small" src={logosSmall} alt="" />
-        </div>
-      </>
-    )
-  }
 </section>
 
 <style>
