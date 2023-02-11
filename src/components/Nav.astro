@@ -1,51 +1,135 @@
 ---
-import logo from '../images/logo.svg'
+import logo from '../images/logo.svg';
 ---
 
-<header class="header">
+<header id="header" class="header">
   <div class="container">
     <div class="logo">
-      <a href="/" class="flex items-end " >
-        <img src={logo} alt="logo" class=' font-[1000] scale-y-[0.85] text-xl  bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent'/>
-        <span class=' font-[1000] ml-1 scale-y-[0.85] text-xl  bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent'>Phil-tech </span>
+      <a href="/" class="flex items-end">
+        <img
+          src={logo}
+          alt="logo"
+          class="font-[1000] scale-y-[0.85] text-xl bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent"
+        />
+        <span
+          class="font-[1000] ml-1 scale-y-[0.85] text-xl bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent"
+          >Phil-tech
+        </span>
       </a>
     </div>
-    <nav>
+    <nav class="hidden space-x-8 md:flex font-bold">
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/tech">Tech</a></li>
         <li><a href="/blog">Blog</a></li>
       </ul>
     </nav>
+
+    <button
+      id="menu-btn"
+      class="block hamburger translate-y-2 md:hidden focus:outline-none"
+      type="button"
+    >
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+    <div
+      id="menu"
+      class="absolute hidden md:hidden p-6 rounded-lg bg-[rgba(0,0,0,0.8)] left-6 right-6 top-20 z-50"
+    >
+      <div
+        class="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm"
+      >
+        <a href="/" class="w-full text-center text-white">Home</a>
+        <a href="/tech" class="w-full text-center text-white">Tech</a>
+        <a href="/blog" class="w-full text-center text-white">Blog</a>
+      </div>
+    </div>
   </div>
 </header>
 
 <style>
+  .hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background: #9c9aa6;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+
+  .hamburger-bottom {
+    transform: translateY(14px);
+  }
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+
+  .open .hamburger-middle {
+    display: none;
+  }
+
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
   .header {
-  height: 70px;
-  background: var(--color-primary);
-}
-.logo_words{
-  
-}
-.header .container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-.header img {
-  height: 35px;
-  vertical-align: middle;
-}
-.header nav ul {
-  display: flex;
-}
-.header nav ul li {
-  padding: 0 10px;
-}
-.header nav ul li a {
-  color: #fff;
-}
+    height: 70px;
+    background: var(--color-primary);
+  }
+  .logo_words {
+  }
+  .header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .header img {
+    height: 35px;
+    vertical-align: middle;
+  }
+  .header nav ul {
+    display: flex;
+  }
+  .header nav ul li {
+    padding: 0 10px;
+  }
+  .header nav ul li a {
+    color: #fff;
+  }
 </style>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  btn.addEventListener('click', navToggle);
+  const menu = document.getElementById('menu');
+  function navToggle() {
+    btn.classList.toggle('open');
+    menu.classList.toggle('flex');
+    menu.classList.toggle('hidden');
+  }
+</script>

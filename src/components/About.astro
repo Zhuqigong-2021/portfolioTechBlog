@@ -1,34 +1,55 @@
 ---
-import github from '../images/github.svg'
-import linkedin from '../images/linkedin.svg'
-import logo from '../images/logo.svg'
-import Card from './Card.astro'
-const aboutData =[
-  {title:'Faster Learner',body:'I am a rapid learner and I am curious and willing to learn any new technology' ,imgUrl:'🚀' },
-  {title:'Frontend Development',body:'I can build fully responsive web and software interface with best practices and good accessibilities ',imgUrl:'🔥' },
-  {title:'Backend Development',body:'I am able to use various types of technology to build scalable and reliable app based on business need ',imgUrl:'💻'},
-]
+import github from '../images/github.svg';
+import linkedin from '../images/linkedin.svg';
+import logo from '../images/logo.svg';
+import Card from './Card.astro';
+const aboutData = [
+  {
+    title: 'Faster Learner',
+    body: 'I am a rapid learner and I am curious and willing to learn any new technology',
+    imgUrl: '🚀',
+  },
+  {
+    title: 'Frontend Development',
+    body: 'I can build fully responsive web and software interface with best practices and good accessibilities ',
+    imgUrl: '🔥',
+  },
+  {
+    title: 'Backend Development',
+    body: 'I am able to use various types of technology to build scalable and reliable app based on business need ',
+    imgUrl: '💻',
+  },
+];
 ---
 
-<section class='wave flex flex-col justify-center items-center text-center h-auto'>
-
-  <h1 class=" text-center showcase-text font-extrabold sm:max-w-[400px] md:max-w-[600px] md:text-[50px] text-[30px] my-24 flex-wrap mx-2">I know That <span class=" bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">Good Apps</span> 
-    means <span class=" bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">Good Business</span> </h1>
-    <div class='grid-cols-1 md:grid md:grid-cols-3 lg:space-x-7 mb-44'>
-     {
-      aboutData.map(({title,body,imgUrl})=>(<Card title={title} body={body} imgUrl={imgUrl}/>))
-     }
-
-    </div>
+<section
+  class="wave flex flex-col justify-center items-center text-center h-auto"
+>
+  <h1
+    class="text-center showcase-text font-extrabold sm:max-w-[400px] md:max-w-[600px] md:text-[50px] text-[32px] my-24 flex-wrap mx-2"
+  >
+    I know that <span
+      class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent"
+      >Good Apps</span
+    >
+    means <span
+      class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent"
+      >Good Business</span
+    >
+  </h1>
+  <div class="grid-cols-1 md:grid md:grid-cols-3 lg:space-x-7 mb-44">
+    {
+      aboutData.map(({ title, body, imgUrl }) => (
+        <Card title={title} body={body} imgUrl={imgUrl} />
+      ))
+    }
+  </div>
 </section>
 
-
 <style>
- 
-.showcase h1 {
-  /* font-size: 50px; */
-  /* color: #fff; */
-  margin-bottom: 20px;
-}
-
+  .showcase h1 {
+    /* font-size: 50px; */
+    /* color: #fff; */
+    margin-bottom: 20px;
+  }
 </style>

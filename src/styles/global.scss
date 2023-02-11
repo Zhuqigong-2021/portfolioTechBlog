@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 :root {
   --color-primary: #0f172a;
   --color-secondary: #160244;
   // --color-third: #41a9bb;
   --color-third: rgba(1, 221, 255, 0.8);
+}
+html {
+  scroll-behavior: smooth;
+  // scroll-margin-top: 100px;
+  scroll-padding-top: 75px;
 }
 
 *,
@@ -11,16 +17,20 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background: #f8fafc;
   color: #333;
 }
-
+h1 {
+  font-weight: 900;
+  font-size: 30px;
+}
 a {
   text-decoration: none;
   color: #333;
