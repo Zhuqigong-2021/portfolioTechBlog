@@ -132,8 +132,10 @@ red |  green  | blue  <br>
 
 ```css
 p {
-  color: rgb(0, 0, 0); //=>pure black
-  background-color: rgb(255, 255, 255); //=>pure white
+  color: rgb(0, 0, 0);
+  /* text color is pure black */
+  background-color: rgb(255, 255, 255);
+  /* background ispure white */
 }
 ```
 
@@ -148,8 +150,8 @@ The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully o
 
 ```css
 p {
-  color: rgba(0, 0, 0, 0.5); //=>with transparency
-  background-color: rgba(255, 255, 255, 0.9); //=>with transparency
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 ```
 
