@@ -12,7 +12,7 @@ const Navcss = () => {
           'color',
           'unit',
           'styles',
-          'inheritence',
+          'inheritance',
           'boxmodel',
           'specificity',
           'pseudoclass',
