@@ -394,7 +394,8 @@ p {
   border: 1px solid black;
   /* border width =1px all around */
   border-width: 1px 2px 0px 0.5px;
-  /* we can also specify the border with ourselves 
+  /* we can also specify the 
+  border with ourselves 
   top right bottom left */
 }
 ```
