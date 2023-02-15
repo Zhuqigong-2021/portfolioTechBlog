@@ -18,7 +18,20 @@ const Navcss = () => {
           'pseudoclass',
         ]}
       />
-      <SideItem text={'position'} array={['static', 'float', 'flex', 'grid']} />
+      <SideItem
+        text={'posilayout'}
+        array={[
+          'normalflow',
+          'float',
+          'flex',
+          'inlineflex',
+          'grid',
+          'position',
+          'zindex',
+          'mulColL',
+          'overflow',
+        ]}
+      />
       <SideItem text={'advance'} array={['static', 'float', 'flex', 'grid']} />
       <SideItem
         text={'animation'}
