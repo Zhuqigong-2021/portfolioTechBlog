@@ -16,6 +16,7 @@ selector {
 for example
 
 <code class='break-words'>
+
 > ```css
 > p {
 >   padding: 0;
@@ -801,14 +802,84 @@ ul {
 }
 ```
 
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
+<h3 class='text-red-400 my-6'>axis</h3>
+flex-direction: This property sets the direction of the main axis of the flex container. The main axis is the axis along which the flex items are laid out. Possible values are row, row-reverse, column, and column-reverse.
+
+```css
+.container {
+  flex-direction: row|row-reverse|column|column-reverse;
+}
+```
+
+<h3 class='text-red-400 my-6'>Justify-content</h3>
+
+```css
+.container {
+  justify-content: flex-start|flex-end|center|space-round|space-between|space-evenly;
+}
+```
+
+<h3 class='text-red-400 my-6'>align-items</h3>
+
+```css
+.container {
+  align-items: stretch;
+  /* element grows to fill the entrie space */
+  align-items: flex-start| flex-end | center;
+}
+```
+
+<h3 class='text-red-400 my-6'>flex-grow</h3>
+
+```css
+.container {
+  flex-grow: 1;
+  /* take all the remain space while growing */
+  flex-basis: 0;
+  /* where do we calculate the grow value,in this case we just calculate from 0px */
+}
+```
+
+<h3 class='text-red-400 my-6'>flex-shrink </h3>
+
+```css
+.container {
+  flex-shrink: 1;
+  /* default setting to shrink based on the size*/
+  flex-shrink: 0;
+  /* control the item not shrink */
+}
+```
+
+<h3 class='text-red-400 my-6'>shorthand</h3>
+
+```css
+.container {
+  flex: grow | shrink | basis;
+  flex: 1;
+  /* means flex-grow:1 shrink and basis go to default */
+}
+```
+
+<h3 class='text-red-400 my-6'>align-self</h3>
+
+```css
+.container {
+  align-self: flex-start|flex-end| center;
+  /* change individual alignment of an element */
+}
+```
+
+<h3 class='text-red-400 my-6'>Order</h3>
+
+order:to specify which order the elment ranked
+
+order:1 means the first element in the order
+
+order:starts from 0 this is the default setting number
+
+don't use order property ,it won't change html when tab,
+tab based on the order in the html or based on defined order in css
 
 <h2 id='inlineflex' class='font-bold text-gray-700 my-10'> Inline-flex </h2>
 
@@ -819,47 +890,423 @@ but it makes the parent element to display as inline => the element itself only 
 but its children elements to display flex => it allows what's inside of it to display side by side
 
 <h2 id='grid' class='font-bold text-gray-700 my-10'> Grid </h2>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
 
-<h2 id='position' class='font-bold text-gray-700 my-10'> Position </h2>
-<h3 class='text-red-400 my-6'>static</h3>
-<h3 class='text-red-400 my-6'>relative</h3>
-<h3 class='text-red-400 my-6'>absolute</h3>
-<h3 class='text-red-400 my-6'>fiexed</h3>
-<h3 class='text-red-400 my-6'>sticky</h3>
+<h3 class='text-red-400 my-6'>grid-template-columns</h3>
 
-sadf as dfsa das dasd sfa das dsa dfsa dsa dsa dfasd fsad fsdad fsa dsa dsa df sadf sad fds dfs dfsad fsad fsdf sdf sjadlf sahof awelfj awohef lawhfe ioawefo awjoe fhawoijef oawjefo ajweo fjawof oawej oawjeof jwaofj aerighoeahfl asnfugihawlefma mejofha wioehfnoa wneofan owe
+<h4 class='text-purple-400 my-3'>basic usage</h4>
+`grid-template-columns:100px 50px` => means we only have two columns
 
-<h2 id='zindex' class='font-bold text-gray-700 my-10'> Z-index </h2>
+<h4 class='text-purple-400 my-3'>fr</h4>
+`grid-template-columns:1fr 2fr 1fr` => allocate space based on the ratio
 
-bigger number is topper than the lowwer number
+<h4 class='text-purple-400 my-3'>repeat</h4>
+
+`grid-template-columns:1fr 1fr 1fr 1fr `=> repeat(4, 1fr)
+
+<h3 class='text-red-400 my-6'>grid-template-rows</h3>
+
+<h4 class='text-purple-400 my-3'>basic</h4>
+`grid-template-rows:50px 100px` => we have two rows first row 50px second 100px
+<h4 class='text-purple-400 my-3'>minmax</h4>
+
+`grid-template-rows:minmax(50px ,auto)` =>
+
+<li> max:less than or equal to max </li>
+<li> min:greater than or equal to min </li>
+<h4 class='text-purple-400 my-3'>auto-fill</h4>
+`grid-template-columns:repeat(auto-fill,minmax(200px ,1fr))`
+
+take as many 200px as possible untial it can't,then use 1fr to take the rest
+
+<h3 class='text-red-400 my-6'>grid-template</h3>
+<h4 class='text-purple-400 my-3'>grid-template:row / column</h4>
+it is the shortcut of defining both row and columns
+
+```css
+.container {
+  grid-template: 50px 100px / 100px 50px;
+}
+```
+
+<h3 class='text-red-400 my-6'>grid-auto-rows</h3>
+
+```css
+.container {
+  grid-auto-rows: 150px 100px;
+  /* this is to define the rest of rows not defined by grid-template-rows */
+  /* if rest of  the rows are more than 2 , it will cycle around this number rest of the 1st 150px rest of 2nd 100px  rest of 3nd 150px again */
+}
+```
+
+<h3 class='text-red-400 my-6'>grid-auto-colomns</h3>
+
+<h4 class='text-purple-400 my-3'>grid-template:row / column</h4>
+
+```css
+.container {
+  grid-auto-columns: 150px 100px;
+  /* this is to define columns don't predefined by grid-template-columns  */
+}
+```
+
+  <h3 class='text-red-400 my-6'> grid-auto-flow</h3> 
+  determines where new elment added in row direction or column direction
+  
+  by default grid-auto-flow: row
+
+```css
+.container {
+  grid-auto-flow: row dense;
+  /* dense is to fit missing gap with proper size element .
+  "dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items. */
+}
+```
+
+  <h3 class='text-red-400 my-6'> grid-template-areas</h3>
+
+  <h4 class='text-purple-400 my-3'>normal case</h4>
+
+```css
+parent {
+  grid-template-areas:
+    'header  header'
+    'sidebar content';
+}
+
+.item1 {
+  grid-area: content;
+}
+.item2 {
+  grid-area: header;
+}
+.item6 {
+  grid-area: sidebar;
+}
+```
+
+ <h4 class='text-purple-400 my-3'>use dot </h4>
+ if we have three columns and we don't want to give a name we want it to act like that
+
+```css
+parent {
+  grid-template-areas:
+    'header  header header'
+    'sidebar content .';
+}
+
+.item1 {
+  grid-area: content;
+}
+.item2 {
+  grid-area: header;
+}
+.item6 {
+  grid-area: sidebar;
+}
+```
+
+<h4 class='text-purple-400 my-3'>occupy the content with two rows </h4>
+
+```css
+parent {
+  grid-template-areas:
+    'header  header'
+    'sidebar content'
+    'sidebar content';
+}
+
+.item1 {
+  grid-area: content;
+}
+.item2 {
+  grid-area: header;
+}
+.item6 {
+  grid-area: sidebar;
+}
+```
+
+  <h3 class='text-red-400 my-6'> gap</h3>
+
+row-gap | column-gap | gap
+
+```css
+#flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 20px 5px;
+  /* gap: row gap | column gap */
+}
+
+#flexbox > div {
+  border: 1px solid green;
+  background-color: lime;
+  flex: 1 1 auto;
+  width: 100px;
+  height: 50px;
+}
+```
+
+  <h3 class='text-red-400 my-6'> span</h3>
+
+<h4 class='text-purple-400 my-3'>normal case </h4>
+
+```css
+.container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  /* this will make this column span for 2 */
+}
+```
+
+<h4 class='text-purple-400 my-3'>shorthand</h4>
+
+```css
+.container {
+  grid-row: 1/3;
+  /* shorthand of row span for 2 */
+  grid-column: 1/3;
+  /* shorthand of column span for 2 */
+}
+```
+
+<h4 class='text-purple-400 my-3'>span in a certain row or column</h4>
+
+```css
+.item_one {
+  grid-row: span 2;
+  /* this item has a row span for 2 */
+}
+```
+
+<h4 class='text-purple-400 my-3'>single row or column</h4>
+
+```css
+.item_one {
+  grid-row: 2;
+  /* this style will apply on the second row*/
+}
+```
+
+<h4 class='text-purple-400 my-3'>to end</h4>
+
+we use negative value to count down normal -1 means the end
+
+```css
+.item_one {
+  grid-column: 1/-1;
+  /* this item will last from first column to the end */
+}
+```
+
+  <h3 class='text-red-400 my-6'> justify and align</h3>
+
+this is exactly the same with flex
+
+justify-content:center | start | end ...
+
+align-content:center | start | end ...
+
+justify-items | align-items : start|end|center ...
+
+align-self | justify-self: center
+
+  <h2 id='position'class='font-bold text-gray-700 my-10'> Position </h2> 
+  
+  <h3 class='text-red-400 my-6'> static</h3> 
+  
+  ```css
+  box{
+    position:static;
+    /* this is default setting */
+  }
+  ```
+
+  <h3 class='text-red-400 my-6'> relative</h3>
+
+it is relative to its own original place =>this case is rarely used
+
+we can also use position relative to combine absolute in later cases
+
+```css
+box {
+  position: relative;
+  top: 2rem;
+}
+```
+
+  <h3 class='text-red-400 my-6'> absolute</h3>
+
+if box is the parent of div , div will be positioned based on its parent elemnt box .
+in this case will take the whole height
+
+```css
+box {
+  position: relative;
+}
+
+div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+```
+
+  <h3 class='text-red-400 my-6'> fixed</h3>
+
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+<div class='bg-orange-200'>A fixed element does not leave a gap in the page where it would normally have been located.</div>
+
+<br />
+
+```css
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73ad21;
+}
+```
+
+  <h3 class='text-red-400 my-6'> sticky</h3>
+
+An element with position: sticky; is positioned based on the user's scroll position.
+
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+  <h2 id='zindex'class='font-bold text-gray-700 my-10'> Z-index</h2>
+
+z-index with bigger number is on the topper layer than the lowwer number
 
 use position and z-index to have its own stacking context
 
-<h2 id='mulColL' class='font-bold text-gray-700 my-10'> Multiply Column Layout </h2>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
-<h3 class='text-red-400 my-6'>Syntax</h3>
+  <h2 id='mulColL' class='font-bold text-gray-700 my-10'> Multiply Column Layout </h2>
 
-<h2 id='overflow' class='font-bold text-gray-700 my-10'> Overflow </h2>
+  <h3 class='text-red-400 my-6'> column-count</h3> 
+  
+  ```
+  colum-count:2;
+  ```
 
-<h3 class='text-red-400 my-6'>visible</h3>
+naturally comes out 2 columns
+
+2 means max number of columns you can have
+
+  <h3 class='text-red-400 my-6'> column-width</h3>
+
+```
+column-width:100px;
+```
+
+if we write this code it means
+
+  <li>columns width can not be smaller than 100px</li>
+  <li>filled with as many 100px columns as possible</li>
+  <li>it doesn't have to be 100px exactly, maybe more than that to fill the extra gap</li>
+  
+  <h3 class='text-red-400 my-6'> column-rule</h3>
+
+```
+column-rule:1px solid black;
+```
+
+it act just like a border in-between the columns with specified width and color
+
+  <h3 class='text-red-400 my-6'> column-gap</h3>
+
+```
+column-gap:40px;
+```
+
+distance between the column
+
+  <h3 class='text-red-400 my-6'> column-span</h3>
+
+```
+column-span:all;
+```
+
+<br />
+
+<li>work on header to take the entire line</li>
+<li>we can only use all or none as value in column-span,but we can not specify the number like column-span:2;</li>
+
+  <h3 class='text-red-400 my-6'> column-fill</h3>
+
+```
+column-fill:auto | balance;
+```
+
+<br />
+
+<li>default should be balance</li>
+<li>auto => to fill the rest of the space in column</li>
+
+  <h2 id='overflow' class='font-bold text-gray-700 my-10'> Overflow</h2>
+
+  <h3 class='text-red-400 my-6'> visible</h3>
+
+```css
+.box {
+  overflow: visible;
+  /* visible is the default setting */
+}
+```
+
 <h3 class='text-red-400 my-6'>auto</h3>
+
+```css
+.box {
+  overflow: auto;
+  /* automatically add a scrollbar if needed */
+}
+```
+
 <h3 class='text-red-400 my-6'>scroll</h3>
+
+```css
+.box {
+  overflow: scroll;
+  /* make the content isndie its container scrollable*/
+}
+```
+
 <h3 class='text-red-400 my-6'>hidden</h3>
+
+```css
+.box {
+  overflow: hidden;
+  /* anything outside of itsc container will be hidden*/
+}
+```
+
 <h3 class='text-red-400 my-6'>axis</h3>
+
+```css
+.box {
+ overflow-x | overflow-y;
+  /* to change which direction they want to set their overflow to be */
+}
+```
+
 <h3 class='text-red-400 my-6'>commonly used situation</h3>
+
+<h4 class='text-purple-400 my-3'>hide the scrollbar but keep functionality</h4>
+
+```css
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* _ Hide scrollbar for IE, Edge and Firefox _ */
+
+.example {
+-ms-overflow-style: none; /_ IE and Edge _/
+scrollbar-width: none; /_ Firefox _/
+}
 ```
