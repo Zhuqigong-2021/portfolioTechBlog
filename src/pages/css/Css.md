@@ -1310,3 +1310,400 @@ column-fill:auto | balance;
 scrollbar-width: none; /_ Firefox _/
 }
 ```
+
+<h2 id='custom' class='font-bold text-gray-700 my-10'> custom style </h2>
+
+<h3 class='text-red-400 my-6'>define variable </h3>
+
+<div>-- to define variable</div>
+
+```css
+:root {
+  --primary-color: red;
+}
+```
+
+<h3 class='text-red-400 my-6'>var</h3>
+
+var() to read and use variable
+
+```css
+h2 {
+  background: var(--primary-color);
+}
+```
+
+<h3 class='text-red-400 my-6'>default value</h3>
+
+```css
+h2{ margin(--margin,10px)}
+
+/* if without --margin value,default value will come into play */
+
+```
+
+<h3 class='text-red-400 my-6'>overriden</h3>
+
+```css
+:root{
+--margin:0
+}
+
+h2{
+ --margin:20px;
+margin:var(--margin);
+
+```
+
+<h3 class='text-red-400 my-6'>js</h3>
+
+```js
+// log
+const button = document.querySelector('button').addEventListener('click',()=>{
+ console.log(getComputeStyle(document.documentElement.getPropertyValue('--primary-color'))
+})
+
+// set value
+const button = document.querySelector('button').addEventListener('click',()=>{
+ document.documentElement.style.setProperty('--primary-color','red');
+})
+
+```
+
+<h2 id='calc' class='font-bold text-gray-700 my-10'> calc </h2>
+
+<h3 class='text-red-400 my-6'>combine different unit</h3>
+
+we can use different unit to calculate the final value
+
+```
+calc(10%+1rem)
+```
+
+<h3 class='text-red-400 my-6'>variable</h3>
+
+inside of calc function we allow to use variable
+
+```
+calc(var(--margin)+10px)
+```
+
+<h3 class='text-red-400 my-6'>transfer</h3>
+
+we can transfer from number to real unit
+
+```
+--razor:10
+cal(var(--razor)*1px)
+
+```
+
+<h2 id='advanceSel' class='font-bold text-gray-700 my-10'> advanced selector </h2>
+
+<h3 class='text-red-400 my-6'>A > B</h3>
+B is direct child ，can not be grandchild
+
+<h3 class='text-red-400 my-6'>A ~ B</h3>
+B is next sibling comes after A ，style not applies to sibling comes before A
+
+<h3 class='text-red-400 my-6'>A + B</h3>
+
+B is the only direct next sibling will apply
+
+<h3 class='text-red-400 my-6'>not()</h3>
+
+The :not() CSS pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class.
+
+```css
+p:not(.irrelevant) {
+  font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+  color: crimson;
+}
+
+p > :not(strong, b.important) {
+  color: darkmagenta;
+}
+```
+
+<h3 class='text-red-400 my-6'>[] attribute selector</h3>
+
+```css
+input[type='text'] {
+  background-color: red;
+  /* only text input will be applied red */
+}
+```
+
+```css
+/* data attribute */
+input[data-margin] {
+  margin: 50px;
+}
+```
+
+```css
+/* anything contain using * */
+input[data-margin*='fa'] {
+  margin: 50px;
+  /* any input with data-margin that contains value of fa */
+}
+```
+
+```css
+/* anything start with using ^ */
+input [data-margin^='fa'] {
+}
+```
+
+```css
+/* ``*/
+input [data-margin$='fa'] {
+}
+```
+
+<h2 id='pseudoel' class='font-bold text-gray-700 my-10'> pseudo element  </h2>
+
+::first-letter | ::frist-line
+
+```css
+p {
+  color: red;
+  font-size: 12pt;
+}
+p::first-letter {
+  color: green;
+  font-size: 200%;
+}
+```
+
+::before ::after
+
+```css
+/* content */
+.box::before {
+  content: '';
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-color: green;
+}
+
+/* attr */
+.box::before {
+  content: atrr(data-text);
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-color: green;
+}
+```
+
+```html
+<body>
+  <div data-text="hi" class="box"></div>
+</body>
+```
+
+<h2 id='advancemar' class='font-bold text-gray-700 my-10'> advanced margin</h2>
+
+<h3 class='text-red-400 my-6'>negative margin</h3>
+
+to make sure overlapping feature
+
+<h3 class='text-red-400 my-6'>center the element </h3>
+
+```css
+.box {
+  margin: 0 auto;
+}
+```
+
+<h2 id='browsersup' class='font-bold text-gray-700 my-10'> browser support </h2>
+
+two webset to search the browser support
+
+<a href='https://caniuse.com/' class='underline  text-blue-500'> can i use.com</a>
+<br>
+<a href='https://developer.mozilla.org/en-US/' class='underline  text-blue-500'> MDN</a>
+
+<!-- [can i use.com](https://caniuse.com/)
+
+[MDN](https://developer.mozilla.org/en-US/) -->
+
+<h2 id='resetnor' class='font-bold text-gray-700 my-10'> reset and normalization </h2>
+
+CSS Reset vs. Normalize
+The Normalize and Reset files are used to create baseline styles for cross-browser consistency when creating webpages. The primary difference is that Normalize aims to identify the different styles in other browsers, starting with styles that developers cannot change. If a style cannot be fixed or updated, that style will be applied to the page for all browsers. Check out the video below to learn more about the difference between the two files.
+
+In the case of the Reset CSS file, default browser styles are handled differently. Reset CSS aims to fix inconsistencies through the stripping of all default styles. This process changes rules with values to zero or the minimum value. So while it strips the defaults, it sets the values to the absolute minimum.
+
+Normalize CSS Example
+Now that you have a basic understanding of how the Normalize file works let’s look at an example of some code from it. The following code handles normalizing the line height across browsers to create consistency.
+
+<h2 id='featurequ' class='font-bold text-gray-700 my-10'> feature query </h2>
+
+<h3 class='text-red-400 my-6'>@support</h3>
+
+```css
+@supports (background-color: revert) {
+  div {
+    background-color: revert;
+  }
+}
+```
+
+<h3 class='text-red-400 my-6'>@support not()</h3>
+
+```css
+@supports not (background-color: revert) {
+  div {
+    background-color: transparent;
+  }
+}
+```
+
+<h3 class='text-red-400 my-6'>and |  or</h3>
+
+```css
+@supports () and|or () {
+}
+```
+
+<br />
+
+<div class='bg-orange-400'> IE don't support @support but not that important</div>
+
+<h2 id='mediaqu' class='font-bold text-gray-700 my-10'> media query </h2>
+
+<h3 class='text-red-400 my-6'>@media</h3>
+print
+
+screen
+
+```css
+@media (min-height: 680px), screen and (orientation: portrait) {
+  /* … */
+}
+```
+
+all
+to all media
+all is omit
+
+<h3 class='text-red-400 my-6'>(orientation: )</h3>
+
+portrait
+The viewport is in a portrait orientation, i.e., the height is greater than or equal to the width.
+
+landscape
+The viewport is in a landscape orientation, i.e., the width is greater than the height.
+
+```css
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+}
+```
+
+<h3 class='text-red-400 my-6'>and | or</h3>
+
+```css
+@media (max-width:200px),(min-width:800px){
+  p{
+  color:green;
+ }
+```
+
+<h2 id='customfont' class='font-bold text-gray-700 my-10'> custom fonts </h2>
+
+<h3 class='text-red-400 my-6'>google fonts</h3>
+
+```html
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" />
+  <style>
+    body {
+      font-family: 'Sofia', sans-serif;
+    }
+  </style>
+</head>
+```
+
+<h3 class='text-red-400 my-6'>@font-face</h3>
+<h4 class='text-purple-400 my-3'>font regular</h4>
+
+```css
+@font-face {
+  font-family: Montserrat;
+  src: url('/fonts/monserrat-regular.woff2') format('woff2'), url('/fonts/monserrat-regular.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+```
+
+<h4 class='text-purple-400 my-3'>font bold</h4>
+
+```css
+@font-face {
+  font-family: Montserrat;
+  src: url('/fonts/monserrat-bold.woff2') format('woff2'), url('/fonts/monserrat-bold.woff')
+      format('woff');
+  font-weight: bold;
+  font-style: bold;
+}
+```
+
+<h4 class='text-purple-400 my-3'>use font</h4>
+
+```css
+body {
+  font-family: Messerat;
+  font-weight: bold;
+}
+```
+
+<h4 class='text-purple-400 my-3'>features </h4>
+
+<div> font-family </div>
+
+<div> src:url()format() </div>
+<div> font-weight </div>
+<div> font-style </div>
+
+<div> font-display</div>
+<li>block</li>
+<li>swap( most common case)</li>
+<li>fallback</li>
+<li>optional</li>
+
+🇼🇫 block:
+
+<div> &nbsp; &nbsp; &nbsp; hold font-loading time as long as possible </div>
+<br>
+🔥 swap:
+
+<li>make loading time shorter </li>
+<li>use fallback fonts to replace temporily </li>
+<li>if succeed loading , change back to custom fonts</li>
+<br>
+🔙  fallback:
+
+<li>only wait couple of seconds</li>
+<li>during these short period, if failed loading ,will never change back to costom fonts</li>
+
+🧺 optional:
+
+<div> &nbsp; &nbsp; &nbsp; 100miliseconds to load ,if not shown ,perminantly load fallback</div>
+<br>

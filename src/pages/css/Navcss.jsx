@@ -32,7 +32,21 @@ const Navcss = () => {
           'overflow',
         ]}
       />
-      <SideItem text={'advance'} array={['static', 'float', 'flex', 'grid']} />
+      <SideItem
+        text={'advance'}
+        array={[
+          'custom',
+          'calc',
+          'advanceSel',
+          'pseudoel',
+          'advancemar',
+          'browsersup',
+          'resetnor',
+          'featurequ',
+          'mediaqu',
+          'customfont',
+        ]}
+      />
       <SideItem
         text={'animation'}
         array={['static', 'float', 'flex', 'grid']}
