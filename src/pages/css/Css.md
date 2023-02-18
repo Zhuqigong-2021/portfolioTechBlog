@@ -1311,6 +1311,8 @@ scrollbar-width: none; /_ Firefox _/
 }
 ```
 
+# advance
+
 <h2 id='custom' class='font-bold text-gray-700 my-10'> custom style </h2>
 
 <h3 class='text-red-400 my-6'>define variable </h3>
@@ -1707,3 +1709,249 @@ body {
 
 <div> &nbsp; &nbsp; &nbsp; 100miliseconds to load ,if not shown ,perminantly load fallback</div>
 <br>
+
+# animation
+
+<h2 id='transition' class='font-bold text-gray-700 my-10'>transition</h2>
+<h3 class='text-red-400 my-6'>factor</h3>
+<h4 class='text-purple-400 my-3'>animation-property</h4>
+you can use all or use speficied property
+<h4 class='text-purple-400 my-3'>animation-duration</h4>
+use 1s or 2s ...
+<h4 class='text-purple-400 my-3'>animation-timing-function</h4>
+
+<li>linear</li>
+
+<li> ease-in | ease-out | ease-in-out </li>
+
+<li> customed version :cubic-bezier </li>
+
+<h4 class='text-purple-400 my-3'>animation-delay</h4>
+
+```
+animation-delay:2s
+
+```
+
+<h3 class='text-red-400 my-6'>shortcut</h3>
+
+transition:property duration timing-function delay
+
+```css
+div {
+  transition: all 2s ease-in-out 1s;
+}
+```
+
+<h3 class='text-red-400 my-6'>multi-property</h3>
+
+use comma to separate the different animation
+
+```
+transition:color 1s linear, background-color 2s linear;
+
+```
+
+<h2 id='animation.' class='font-bold text-gray-700 my-10'>animation</h2>
+<h3 class='text-red-400 my-6'>factor</h3>
+<h4 class='text-purple-400 my-3'>animation-name</h4>
+<h4 class='text-purple-400 my-3'>animation duration</h4>
+<h4 class='text-purple-400 my-3'>animation-timing-function</h4>
+<li>linear</li>
+<li>ease-in</li>
+<li>ease-out</li>
+<li>ease-in-out</li>
+<h4 class='text-purple-400 my-3'>animation-delay</h4>
+<h4 class='text-purple-400 my-3'>animation-fill-mode</h4>
+<li>forwards:stay on the last state like 100% progress</li>
+<li>bacwards:state at state of 0%</li>
+<li>both:do both forwards and backwards</li>
+
+<h4 class='text-purple-400 my-3'>animation-iteration-count</h4>
+
+<div>The animation-iteration-count CSS property sets the number of times an animation sequence should be played before stopping.</div>
+
+**infinite**
+
+The animation will repeat forever.
+
+<h4 class='text-purple-400 my-3'>animation-direction</h4>
+
+The animation-direction CSS property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.
+
+```
+animation-direction:normal
+animation-direction:reverse
+animation-direction:alternate
+animation-direction:alternate-reverse
+```
+
+**normal**
+
+The animation plays forwards each cycle. In other words, each time the animation cycles, the animation will reset to the beginning state and start over again. This is the default value.
+
+**reverse**
+
+The animation plays backwards each cycle. In other words, each time the animation cycles, the animation will reset to the end state and start over again. Animation steps are performed backwards, and timing functions are also reversed. For example, an ease-in timing function becomes ease-out.
+
+**alternate**
+
+The animation reverses direction each cycle, with the first iteration being played forwards. The count to determine if a cycle is even or odd starts at one.
+
+**alternate-reverse**
+
+The animation reverses direction each cycle, with the first iteration being played backwards. The count to determine if a cycle is even or odd starts at one.
+
+<h4 class='text-purple-400 my-3'>animation-play-state</h4>
+
+animation-direction:normal|
+
+```css
+container {
+  animation-play-state: running|paused;
+}
+```
+
+<h3 class='text-red-400 my-6'>shortcut</h3>
+
+animation:name duration time-function delay ...
+
+<h3 class='text-red-400 my-6'>@keyframes</h3>
+
+from means 0% ,to means 100%
+
+```css
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+```
+
+<h3 class='text-red-400 my-6'>multi-animation</h3>
+
+we use comma to separate different animation
+
+```css
+div {
+  animation: color-change 1s linear 0.5s forward infinite, size-change 1s linear
+      backwards infinite;
+}
+```
+
+<h2 id='transform' class='font-bold text-gray-700 my-10'>transform</h2>
+
+<h3 class='text-red-400 my-6'>feature</h3>
+transform property doesn't cause other element to relayout themselves
+<h3 class='text-red-400 my-6'>scale</h3>
+
+**syntax**
+
+```
+transform:scale(0~1);
+```
+
+**direction**
+
+```
+transform:scaleX(0~1)|scaleY(0~1);
+```
+
+**example**
+
+```css
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
+}
+
+.scaled {
+  transform: scale(2, 0.5); /* Equal to scaleX(2) scaleY(0.5) */
+  transform-origin: left;
+  background-color: pink;
+}
+```
+
+<h3 class='text-red-400 my-6'>rotate</h3>
+
+**syntax**
+
+```
+transform:rotate(unit);
+```
+
+**unit**
+
+<div> | deg | 0~360 | rotate(90deg) | </div>
+
+<div> | turn | 0~1 | rotate(0.75turn) | </div>
+
+<div> | rad | 0~1 | rotate(0.65rad) | </div>
+
+<h3 class='text-red-400 my-6'>translate</h3>
+
+```css
+div{
+  transform:translate(100px)
+  /* only one value then it is to move to right 100px it is x axis */
+  transform:translate(x,y);
+  /* x y unit can be px  */
+  /* x y unit can be percentage */
+  /* we can use this to center an element */
+  transform:translateX();
+  transform:translateY();
+  /* we can write it separately in different axis */
+}
+
+
+```
+
+<h3 class='text-red-400 my-6'>transfrom-origin</h3>
+
+The transform origin is the point around which a transformation is applied.
+
+**use one or two words of them**
+
+<div>center left right bottom top </div>
+
+or we can use value as well
+
+<div class='bg-orange-300 mb-4'>By default, the origin of a transform is center.</div>
+
+```css
+div {
+  transform-origin: right top;
+}
+```
+
+<h2 id='3danimation' class='font-bold text-gray-700 my-10'>3D animation</h2>
+
+<h3 class='text-red-400 my-6'>transform</h3>
+<h4 class='text-purple-400 my-3'>perspective</h4>
+<li> distance the smaller ,change are larger</li>
+<li> put on  the parent element then children element shared the same vanishing point</li>
+<li> put on the children element, each child has its own vanishing point </li>
+<li> perspective-origin:top bottom left right center</li>
+<h4 class='text-purple-400 my-3'>rotateX() rotateY() rotateZ() </h4>
+<h4 class='text-purple-400 my-3'>transform-style</h4>
+
+```css
+.container {
+  transform-style: flat;
+  /* default setting is flat */
+  transform-style: preserve-3d;
+  /* 3D styling put it on the parent element */
+}
+```

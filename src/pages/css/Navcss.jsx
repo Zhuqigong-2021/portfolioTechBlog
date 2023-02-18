@@ -49,7 +49,7 @@ const Navcss = () => {
       />
       <SideItem
         text={'animation'}
-        array={['static', 'float', 'flex', 'grid']}
+        array={['transition', 'animation.', 'transform ', '3danimation']}
       />
 
       {/* <div className="flex justify-between">
