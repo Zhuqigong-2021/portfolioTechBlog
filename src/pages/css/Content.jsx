@@ -1,6 +1,4 @@
-import React from 'react';
-
-// import css from './css.mdx';
+import React from "react";
 
 const Content = ({ css }) => {
   return <div className="max-w-[1000px]  min-w-[0px]">{css}</div>;

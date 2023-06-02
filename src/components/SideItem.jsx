@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+import down from "../images/down.svg";
+import up from "../images/up.svg";
 const SideItem = ({ text, array }) => {
   const [toggle, setToggle] = useState(false);
   return (
@@ -13,7 +14,8 @@ const SideItem = ({ text, array }) => {
           id="btnbasic"
           onClick={() => setToggle(!toggle)}
         >
-          {toggle ? '🔼' : '🔽'}
+          {/* {toggle ? '🔼' : '🔽'} */}
+          {toggle ? <img src={up} alt="up" /> : <img src={down} alt="down" />}
         </button>
       </div>
       <div className="flex flex-col ">

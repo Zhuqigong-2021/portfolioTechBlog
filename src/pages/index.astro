@@ -1,16 +1,16 @@
 ---
-import Heropage from '../components/Heropage.astro';
-import MainLayout from '../layouts/MainLayout.astro';
-import Footer from '../components/Footer.astro';
+import Heropage from "../components/Heropage.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Footer from "../components/Footer.astro";
 
-import About from '../components/About.astro';
-import Portfolio from '../components/Portfolio.astro';
-import Skills from '../components/Skills.astro';
+import About from "../components/About.astro";
+import Portfolio from "../components/Portfolio.jsx";
+import Skills from "../components/Skills.astro";
 ---
 
 <MainLayout title="QG blog">
   <Heropage />
   <About />
-  <Portfolio />
+  <Portfolio client:load />
   <Skills />
 </MainLayout>

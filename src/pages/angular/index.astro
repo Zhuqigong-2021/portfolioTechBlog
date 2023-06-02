@@ -1,27 +1,27 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import Navcss from "./Navcss.jsx";
+import Navangular from "./Navangular.jsx";
 import Content from "./Content.jsx";
-import Css from "./Css.md";
+import Angular from "./Angular.md";
 ---
 
-<MainLayout title="css note">
+<MainLayout title="angular note">
   <div class="flex relative justify-center w-full bg-teal-100 pb-4">
     <div
       class="bg-red-200 md:flex justify-end h-full w-[10%] min-w-[150px] hidden"
     >
-      <Navcss client:load />
+      <Navangular client:load />
     </div>
 
     <main class="mx-2 text-left mt-20 min-w-[0px]">
-      <Content css={Css}>
-        <Css slot="css" />
+      <Content angular={Angular}>
+        <Angular slot="angular" />
       </Content>
     </main>
   </div>
   <div class="fixed bottom-4 right-4 z-50">
     <button
-      id="menu-css-btn"
+      id="menu-angular-btn"
       class="block hamburger translate-y-2 md:hidden focus:outline-none"
       type="button"
     >
@@ -31,13 +31,13 @@ import Css from "./Css.md";
     </button>
   </div>
   <div
-    id="css-menu"
+    id="angular-menu"
     class="fixed overflow-y-auto hidden md:hidden p-6 rounded-lg bg-[rgba(255,255,255,0.8)] left-6 right-6 bottom-6 top-20 z-10"
   >
     <div
       class="flex flex-col items-center place-content-evenly w-full space-y-6 font-bold rounded-sm"
     >
-      <Navcss client:load />
+      <Navangular client:load />
       <!-- <a href="#basic" class="w-full text-center text-white">Basic</a>
       <a href="#position" class="w-full text-center text-white"
         >Layout & Position</a
@@ -96,9 +96,9 @@ import Css from "./Css.md";
   </style>
 
   <script>
-    const btn = document.getElementById("menu-css-btn");
+    const btn = document.getElementById("menu-angular-btn");
     btn.addEventListener("click", navToggle);
-    const menu = document.getElementById("css-menu");
+    const menu = document.getElementById("angular-menu");
     function navToggle() {
       btn.classList.toggle("open");
       menu.classList.toggle("flex");
