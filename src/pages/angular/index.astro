@@ -6,7 +6,7 @@ import Angular from "./Angular.md";
 ---
 
 <MainLayout title="angular note">
-  <div class="flex relative justify-center w-full bg-teal-100 pb-4">
+  <div class="flex relative justify-center w-full pb-4">
     <div
       class="bg-red-200 md:flex justify-end h-full w-[10%] min-w-[150px] hidden"
     >
@@ -94,15 +94,4 @@ import Angular from "./Angular.md";
       transform: rotate(-45deg) translateY(6px) translateX(-6px);
     }
   </style>
-
-  <script>
-    const btn = document.getElementById("menu-angular-btn");
-    btn.addEventListener("click", navToggle);
-    const menu = document.getElementById("angular-menu");
-    function navToggle() {
-      btn.classList.toggle("open");
-      menu.classList.toggle("flex");
-      menu.classList.toggle("hidden");
-    }
-  </script>
 </MainLayout>

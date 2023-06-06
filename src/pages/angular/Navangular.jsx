@@ -4,39 +4,19 @@ import SideItem from "../../components/SideItem.jsx";
 const Navangular = () => {
   return (
     <div className="h-full fixed bottom-0 overflow-x-hidden top-20 m-1 px-2 md:flex md:flex-col mt-2">
-      <SideItem text={"setup"} array={["cli", "new"]} />
+      <SideItem text={"setup"} array={["cli"]} />
+      <SideItem text={"component"} array={["import", "new"]} />
+      <SideItem text={"class"} array={[]} />
+      <SideItem text={"service"} array={[]} />
+      <SideItem text={"props"} array={[]} />
+      <SideItem text={"state"} array={[]} />
+      <SideItem text={"style"} array={["scope", "global"]} />
+      <SideItem text={"attributes"} array={[]} />
+      <SideItem text={"event"} array={["click", "onChange", "customed"]} />
+      <SideItem text={"structural"} array={["letof", "index", "styles"]} />
       <SideItem
-        text={"posilayout"}
-        array={[
-          "normalflow",
-          "float",
-          "flex",
-          "inlineflex",
-          "grid",
-          "position",
-          "zindex",
-          "mulColL",
-          "overflow",
-        ]}
-      />
-      <SideItem
-        text={"advance"}
-        array={[
-          "custom",
-          "calc",
-          "advanceSel",
-          "pseudoel",
-          "advancemar",
-          "browsersup",
-          "resetnor",
-          "featurequ",
-          "mediaqu",
-          "customfont",
-        ]}
-      />
-      <SideItem
-        text={"animation"}
-        array={["transition", "animation.", "transform ", "3danimation"]}
+        text={"others"}
+        array={["ngIf", "ngClass", "ngStyle", "ngSwitch", "ngContainer"]}
       />
     </div>
   );

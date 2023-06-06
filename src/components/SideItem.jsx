@@ -9,14 +9,16 @@ const SideItem = ({ text, array }) => {
         <a href={`#${text}`}>
           <span className="font-bold">{text}</span>
         </a>
-        <button
-          className="ml-4"
-          id="btnbasic"
-          onClick={() => setToggle(!toggle)}
-        >
-          {/* {toggle ? '🔼' : '🔽'} */}
-          {toggle ? <img src={up} alt="up" /> : <img src={down} alt="down" />}
-        </button>
+        {array.length !== 0 && (
+          <button
+            className="ml-4"
+            id="btnbasic"
+            onClick={() => setToggle(!toggle)}
+          >
+            {/* {toggle ? '🔼' : '🔽'} */}
+            {toggle ? <img src={up} alt="up" /> : <img src={down} alt="down" />}
+          </button>
+        )}
       </div>
       <div className="flex flex-col ">
         {toggle && (
