@@ -40,16 +40,16 @@ const Portfolio = () => {
       type: "Web App",
     },
     {
-      projectDescription: "fullstack next AI prompt-shared app",
-      git: "https://github.com/Zhuqigong-2021/Share-mind-next13.4",
+      projectDescription: "fullstack React Native sanity app",
+      git: "https://github.com/Zhuqigong-2021/React-Native-Food-Delivery-App",
       imgUrl:
-        "https://plus.unsplash.com/premium_photo-1683120963435-6f9355d4a776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGFydGlmaWNpYWwlMjBpbnRlbGxpZ2VuY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://images.unsplash.com/photo-1615719413546-198b25453f85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZCUyMGRlbGl2ZXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       go: "https://fastidious-gingersnap-e0bedc.netlify.app/",
-      type: "M.E.R.N",
+      type: "Mobile App",
     },
   ];
   const [filteredData, setFilteredData] = useState(data);
-  const filterMERN = data.filter((pro) => pro.type == "M.E.R.N");
+  const filterMobile = data.filter((pro) => pro.type == "Mobile App");
   const filterWeb = data.filter((pro) => pro.type == "Web App");
   return (
     <section
@@ -73,9 +73,9 @@ const Portfolio = () => {
         </button>
         <button
           className="font-semibold bg-white rounded-md my-10 hover:bg-[#0f172a] hover:text-white px-4 py-1"
-          onClick={() => setFilteredData(filterMERN)}
+          onClick={() => setFilteredData(filterMobile)}
         >
-          M.E.R.N
+          Mobile App
         </button>
         <button
           className="font-semibold rounded-md my-10 bg-[#0f172a] text-white px-4 py-1"
