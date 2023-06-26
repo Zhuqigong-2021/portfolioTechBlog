@@ -44,7 +44,7 @@ const Portfolio = () => {
       git: "https://github.com/Zhuqigong-2021/React-Native-Food-Delivery-App",
       imgUrl:
         "https://images.unsplash.com/photo-1615719413546-198b25453f85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZCUyMGRlbGl2ZXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      go: "https://fastidious-gingersnap-e0bedc.netlify.app/",
+      go: "https://heartfelt-frangollo-92ddfd.netlify.app/",
       type: "Mobile App",
     },
   ];
