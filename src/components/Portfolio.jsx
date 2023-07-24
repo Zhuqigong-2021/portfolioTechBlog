@@ -51,7 +51,7 @@ const Portfolio = () => {
       projectDescription: "fullstack React ASP.netcore app",
       git: "https://github.com/Zhuqigong-2021/ReactASP.net_coreSushiFullStack",
       imgUrl:
-        "https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+        "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3VzaGl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       go: "https://master--celadon-horse-9b902b.netlify.app/",
       type: "Web App",
     },
