@@ -47,6 +47,14 @@ const Portfolio = () => {
       go: "https://heartfelt-frangollo-92ddfd.netlify.app/",
       type: "Mobile App",
     },
+    {
+      projectDescription: "fullstack React ASP.netcore app",
+      git: "https://github.com/Zhuqigong-2021/ReactASP.net_coreSushiFullStack",
+      imgUrl:
+        "https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+      go: "https://master--celadon-horse-9b902b.netlify.app/",
+      type: "Web App",
+    },
   ];
   const [filteredData, setFilteredData] = useState(data);
   const filterMobile = data.filter((pro) => pro.type == "Mobile App");
