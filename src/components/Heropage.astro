@@ -1,13 +1,13 @@
 ---
-import water from '../images/water.svg';
+import water from "../images/water.svg";
 export interface Props {
   heading?: string;
   text?: string;
   showExtra?: boolean;
 }
 const {
-  heading = 'Welcome To Phil Portforlio Website',
-  text = 'My name is Qigong,Zhu . For your convenience , call me Phil for short . I am trilingual . I am a full stack developer.I can do frontend development and I can also do backend development',
+  heading = "Welcome To Phil Portfolio Website",
+  text = "My name is Qigong,Zhu . For your convenience , call me Phil for short . I am trilingual . I am a full stack developer.I can do frontend development and I can also do backend development",
   showExtra = false,
 } = Astro.props as Props;
 ---
@@ -39,7 +39,7 @@ const {
 
 <style>
   #btn::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     botom: 0;
@@ -84,7 +84,7 @@ const {
         rgba(2, 80, 92, 0.7),
         var(--color-third) 93%
       ),
-      url('https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+      url("https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-repeat: no-repeat;
     background-size: cover;
     /* mix-blend-mode: multiply; */
