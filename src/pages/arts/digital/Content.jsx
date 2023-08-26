@@ -30,42 +30,42 @@ const Pencil = () => {
   return (
     <div className="digital min-h-[65vh] flex flex-col   text-center ">
       <h2 className="my-10 text-xl font-bold bg-gradient-to-r from-transparent via-indigo-500 from-10% via-30% to-transparent to-90%  text-white p-4  w-full text-center">
-        Color Pencil Drawings
+        Digital Paintings
       </h2>
       {/* <div className="justify-center gap-4 w-full grid grid-flow-dense grid-cols-4 auto-rows-[550px] "> */}
-      <div className="gallery border w-full">
-        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px] shadow-md">
+      <div className="gallery  w-full">
+        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
           <img src={psc1} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
           <img src={psc2} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc3} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
           <img src={psc4} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc5} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc6} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
           <img src={psc7} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md ">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md ">
           <img src={psc8} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc9} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc10} alt="" className="" />
         </div>
 
@@ -73,50 +73,50 @@ const Pencil = () => {
           <img src={psc11} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc12} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc13} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc14} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc15} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc16} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc17} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center big p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc18} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc19} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc20} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc21} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc22} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-md">
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc23} alt="" className="" />
         </div>
       </div>

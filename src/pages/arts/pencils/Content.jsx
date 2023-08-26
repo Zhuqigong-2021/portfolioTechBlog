@@ -1,7 +1,8 @@
 import React from "react";
-import waterColor from "../../../assets/waterColor.jpg";
+
 import mooncake from "../../../assets/pencils/mooncake.jpg";
 import pomegranate from "../../../assets/pencils/pomegranate.jpg";
+import cherry from "../../../assets/pencils/cherry.jpg";
 
 const Pencil = () => {
   return (
@@ -19,6 +20,12 @@ const Pencil = () => {
         <div className="">
           <div className="border-[16px] border-stone-300 p-12 shadow-md shadow-black bg-white ">
             <img src={pomegranate} alt="water" className="h-96 object-cover" />
+          </div>
+        </div>
+
+        <div className="">
+          <div className="border-[16px] border-stone-300 p-12 shadow-md shadow-black bg-white ">
+            <img src={cherry} alt="water" className="h-96 object-cover" />
           </div>
         </div>
       </div>

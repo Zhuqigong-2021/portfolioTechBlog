@@ -74,7 +74,7 @@ const Art = () => {
       <h1 className="text-center showcase-text font-extrabold sm:max-w-[400px] md:max-w-[600px] md:text-[50px] text-[30px] mt-48 mb-24 flex-wrap mx-2">
         My
         <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
-          Arts Portfolio
+          Arts Gallery
         </span>
       </h1>
       <div className="mb-8 flex gap-2 flex-wrap max-w-7xl justify-center">
@@ -84,11 +84,7 @@ const Art = () => {
             color pencil
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden justify-center items-center w-full rounded-lg  ">
-            <a
-              href="/arts/pencils"
-              //   className="overflow-hidden object-cover "
-              target="_blank"
-            >
+            <a href="/arts/pencils">
               <img
                 src={Pencil}
                 alt=""
@@ -107,11 +103,7 @@ const Art = () => {
             water color
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0  justify-center items-center w-full rounded-lg overflow-hidden ">
-            <a
-              href="/arts/watercolor"
-              //   className="overflow-hidden object-cover "
-              target="_blank"
-            >
+            <a href="/arts/watercolor">
               <img
                 src={waterColor}
                 alt=""
@@ -130,11 +122,13 @@ const Art = () => {
             acrylic
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0  justify-center items-center w-full rounded-lg overflow-hidden">
-            <img
-              src={accrylic}
-              alt=""
-              className="object-fit w-[400px] contain border rounded-lg  h-full object-cover blur-[2px] transition-all duration-500 hover:blur-none"
-            />
+            <a href="/arts/acrylic">
+              <img
+                src={accrylic}
+                alt=""
+                className="object-fit w-[400px] contain border rounded-lg  h-full object-cover blur-[2px] transition-all duration-500 hover:blur-none"
+              />
+            </a>
           </div>
 
           <div className="h-10 w-10 rounded-full bg-white absolute bottom-2 left-2 flex justify-center items-center">
@@ -147,11 +141,13 @@ const Art = () => {
             sketch
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0  justify-center items-center w-full rounded-lg overflow-hidden">
-            <img
-              src={sketch}
-              alt=""
-              className="object-fit w-[400px] contain border rounded-lg  h-full object-cover blur-[2px] transition-all duration-500 hover:blur-none"
-            />
+            <a href="/arts/sketch">
+              <img
+                src={sketch}
+                alt=""
+                className="object-fit w-[400px] contain border rounded-lg  h-full object-cover blur-[2px] transition-all duration-500 hover:blur-none"
+              />
+            </a>
           </div>
 
           <div className="h-10 w-10 rounded-full bg-white absolute bottom-2 left-2 flex justify-center items-center">
@@ -167,7 +163,7 @@ const Art = () => {
             <a
               href="/arts/digital"
               //   className="overflow-hidden object-cover "
-              target="_blank"
+              // target="_blank"
             >
               <img
                 src={digital}
@@ -183,18 +179,14 @@ const Art = () => {
         </div>
 
         <div className="relative bg-stone-200 h-48 w-[400px] rounded-lg overflow-hidden ">
-          <a
-            href="/arts/pencils"
-            //   className="overflow-hidden object-cover "
-            target="_blank"
-          >
+          <a href="/arts/quick">
             <div className="absolute top-2 right-2 bg-stone-400 opacity-80  p-2 rounded-lg text-white z-10 ">
               quick sketch
             </div>
           </a>
           <div className="absolute top-0 left-0 right-0 bottom-0  justify-center items-center w-full rounded-lg overflow-hidden">
             <a
-              href="/arts/pencils"
+              href="/arts/quick"
               className="overflow-hidden object-cover z-10 "
               target="_blank"
             >
