@@ -1,0 +1,106 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+// import Content from "./Content";
+---
+
+<MainLayout title="css note">
+  <div class="flex relative justify-center w-full pb-4">
+    <div
+      class="bg-red-200 md:flex justify-end h-full w-[10%] min-w-[150px] hidden"
+    >
+      <!-- <Navcss client:load /> -->
+      this is pencil arts
+    </div>
+
+    <main class="mx-2 text-left mt-20 min-w-[0px]">
+      <!-- <Content /> -->
+    </main>
+  </div>
+  <div class="fixed bottom-4 right-4 z-50">
+    <button
+      id="menu-css-btn"
+      class="block hamburger translate-y-2 md:hidden focus:outline-none"
+      type="button"
+    >
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+  </div>
+  <div
+    id="css-menu"
+    class="fixed overflow-y-auto hidden md:hidden p-6 rounded-lg bg-[rgba(255,255,255,0.8)] left-6 right-6 bottom-6 top-20 z-10"
+  >
+    <div
+      class="flex flex-col items-center place-content-evenly w-full space-y-6 font-bold rounded-sm"
+    >
+      <!-- <Navcss client:load /> -->
+      <!-- <a href="#basic" class="w-full text-center text-white">Basic</a>
+      <a href="#position" class="w-full text-center text-white"
+        >Layout & Position</a
+      >
+      <a href="#advance" class="w-full text-center text-white">Advance</a>
+      <a href="#animation" class="w-full text-center text-white">Animation</a> -->
+    </div>
+  </div>
+
+  <style>
+    .hamburger {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      transition: all 0.25s;
+      position: relative;
+    }
+
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 3px;
+      top: 0;
+      left: 0;
+      background: #9c9aa6;
+      transform: rotate(0);
+      transition: all 0.5s;
+    }
+
+    .hamburger-middle {
+      transform: translateY(7px);
+    }
+
+    .hamburger-bottom {
+      transform: translateY(14px);
+    }
+    .open {
+      transform: rotate(90deg);
+      transform: translateY(0px);
+    }
+
+    .open .hamburger-top {
+      transform: rotate(45deg) translateY(6px) translateX(6px);
+    }
+
+    .open .hamburger-middle {
+      display: none;
+    }
+
+    .open .hamburger-bottom {
+      transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    }
+  </style>
+
+  <script>
+    const btn = document.getElementById("menu-css-btn");
+    btn.addEventListener("click", navToggle);
+    const menu = document.getElementById("css-menu");
+    function navToggle() {
+      btn.classList.toggle("open");
+      menu.classList.toggle("flex");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+</MainLayout>

@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import About from "../components/About.astro";
 import Portfolio from "../components/Portfolio.jsx";
 import Skills from "../components/Skills.astro";
+import Art from "../components/Art.jsx";
 ---
 
 <MainLayout title="QG blog">
@@ -13,4 +14,5 @@ import Skills from "../components/Skills.astro";
   <About />
   <Portfolio client:load />
   <Skills />
+  <Art client:load />
 </MainLayout>

@@ -1,0 +1,84 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+import Content from "./Content";
+import "./style.css";
+---
+
+<MainLayout title="css note">
+  <div class="flex relative justify-center w-full pb-4">
+    <div
+      class="bg-red-200 md:flex justify-end h-full w-[10%] min-w-[150px] hidden"
+    >
+      <!-- <Navcss client:load /> -->
+    </div>
+
+    <main class="mx-2 text-left mt-20 min-w-[0px]">
+      <Content />
+    </main>
+  </div>
+
+  <div
+    id="css-menu"
+    class="fixed overflow-y-auto hidden md:hidden p-6 rounded-lg bg-[rgba(255,255,255,0.8)] left-6 right-6 bottom-6 top-20 z-10"
+  >
+    <style>
+      .hamburger {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        transition: all 0.25s;
+        position: relative;
+      }
+
+      .hamburger-top,
+      .hamburger-middle,
+      .hamburger-bottom {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 3px;
+        top: 0;
+        left: 0;
+        background: #9c9aa6;
+        transform: rotate(0);
+        transition: all 0.5s;
+      }
+
+      .hamburger-middle {
+        transform: translateY(7px);
+      }
+
+      .hamburger-bottom {
+        transform: translateY(14px);
+      }
+      .open {
+        transform: rotate(90deg);
+        transform: translateY(0px);
+      }
+
+      .open .hamburger-top {
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+      }
+
+      .open .hamburger-middle {
+        display: none;
+      }
+
+      .open .hamburger-bottom {
+        transform: rotate(-45deg) translateY(6px) translateX(-6px);
+      }
+    </style>
+
+    <script>
+      const btn = document.getElementById("menu-css-btn");
+      btn.addEventListener("click", navToggle);
+      const menu = document.getElementById("css-menu");
+      function navToggle() {
+        btn.classList.toggle("open");
+        menu.classList.toggle("flex");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</MainLayout>
