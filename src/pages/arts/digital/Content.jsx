@@ -24,7 +24,6 @@ import psc20 from "../../../assets/digital/psc20.jpg";
 import psc21 from "../../../assets/digital/psc21.jpg";
 import psc22 from "../../../assets/digital/psc22.jpg";
 import psc23 from "../../../assets/digital/psc23.jpg";
-import psc24 from "../../../assets/digital/psc24.jpg";
 
 const Pencil = () => {
   return (
