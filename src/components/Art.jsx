@@ -4,7 +4,7 @@
 
 import github from "../images/github.svg";
 import React, { useState } from "react";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai/index.js";
 import Pencil from "../assets/pencils.jpg";
 import waterColor from "../assets/waterColor.jpg";
 import accrylic from "../assets/accrylic.jpg";
