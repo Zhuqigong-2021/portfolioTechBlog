@@ -1,0 +1,20 @@
+@media screen and (min-width: 1200px) {
+  .parent {
+    perspective: 200px;
+  }
+
+  .child {
+    transform: rotateX(8deg);
+  }
+
+  .child1 {
+    transform: rotateX(-8deg);
+  }
+  .child2 {
+    transform: rotateY(-4deg);
+  }
+
+  .child3 {
+    transform: rotateY(4deg);
+  }
+}

@@ -11,7 +11,7 @@ import accrylic from "../assets/accrylic.jpg";
 import sketch from "../assets/sketch.png";
 import digital from "../assets/digital.jpg";
 import quick from "../assets/quick.jpg";
-
+import "./art.css";
 const Art = () => {
   const data = [
     {
@@ -77,9 +77,9 @@ const Art = () => {
           Arts Gallery
         </span>
       </h1>
-      <div className="mb-8 flex gap-2 flex-wrap max-w-7xl justify-center">
+      <div className="mb-8 flex gap-2 flex-wrap max-w-7xl justify-center ">
         {/* card */}
-        <div className="relative bg-stone-200   hover:backdrop-blur-none h-48 w-[400px] rounded-lg ">
+        <div className="relative bg-stone-200   hover:backdrop-blur-none h-48 w-[400px] rounded-lg  ">
           <div className="absolute top-2 right-2 bg-stone-400/50 backdrop-blur-lg  p-2 rounded-lg text-white z-20">
             color pencil
           </div>
@@ -98,7 +98,7 @@ const Art = () => {
           </div>
         </div>
 
-        <div className="relative bg-stone-200 h-48 w-[400px] rounded-lg">
+        <div className="relative bg-stone-200 h-48 w-[400px] rounded-lg  ">
           <div className="absolute top-2 right-2 bg-stone-400/50 backdrop-blur-lg p-2 rounded-lg text-white z-10 ">
             water color
           </div>
@@ -117,7 +117,7 @@ const Art = () => {
           </div>
         </div>
 
-        <div className="relative bg-stone-200 h-48 w-[400px] rounded-lg">
+        <div className="relative bg-stone-200 h-48 w-[400px] rounded-lg  ">
           <div className="absolute top-2 right-2 bg-stone-400/50 backdrop-blur-lg p-2 rounded-lg text-white z-10">
             acrylic
           </div>
@@ -155,7 +155,7 @@ const Art = () => {
           </div>
         </div>
 
-        <div className="relative bg-stone-200 h-48 w-[400px] rounded-lg">
+        <div className="relative bg-stone-200 h-48 w-[400px] rounded-lg ">
           <div className="absolute top-2 right-2 bg-stone-400/50 backdrop-blur-lg p-2 px-4 rounded-lg text-white z-10 ">
             digital
           </div>

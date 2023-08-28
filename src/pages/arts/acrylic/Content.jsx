@@ -7,6 +7,8 @@ import acry5 from "../../../assets/acrylic/acry5.jpg";
 import acry6 from "../../../assets/acrylic/acry6.jpg";
 import acry7 from "../../../assets/acrylic/acry7.jpg";
 import acry8 from "../../../assets/acrylic/acry8.jpg";
+import acry9 from "../../../assets/acrylic/acry9.jpg";
+import acry10 from "../../../assets/acrylic/acry10.jpg";
 import "./style.css";
 
 const Content = () => {
@@ -16,10 +18,10 @@ const Content = () => {
         Acrylic Painting
       </h2>
       <div className="gallery  w-full">
-        <div className="flex justify-center items-center big  p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
+        <div className=" flex justify-center items-center big  p-4 lg:p-1 lg:py-20 border-stone-300 border-[10px]  shadow-stone-800 shadow-md  ">
           <img src={acry1} alt="" className="" />
         </div>
-        {/* <div className="flex justify-center items-center  p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
+        {/* <div className="flex justify-center items-center p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
           <img src={acry2} alt="" className="" />
         </div> */}
         <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
@@ -35,12 +37,18 @@ const Content = () => {
         <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={acry6} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center  p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
+        <div className="flex justify-center items-center big p-4 lg:p-1 lg:py-10 border-stone-300 border-[10px]  shadow-stone-800 shadow-md">
           <img src={acry7} alt="" className="" />
         </div>
 
-        <div className="flex justify-center items-center  p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md ">
+        <div className="flex justify-center items-center big p-4 lg:p-1 lg:py-10 border-stone-300 border-[10px]  shadow-stone-800 shadow-md ">
           <img src={acry8} alt="" className="" />
+        </div>
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md ">
+          <img src={acry9} alt="" className="" />
+        </div>
+        <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px]  shadow-stone-800 shadow-md ">
+          <img src={acry10} alt="" className="" />
         </div>
       </div>
     </div>
