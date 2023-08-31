@@ -25,6 +25,10 @@ img {
 .gallery .wide {
   grid-column: span 2;
 }
+.gallery .extrawide {
+  grid-column: span 4;
+  grid-row: span 2;
+}
 .gallery .tall {
   grid-row: span 2;
 }
