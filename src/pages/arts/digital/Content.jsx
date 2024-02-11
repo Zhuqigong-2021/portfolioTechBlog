@@ -115,7 +115,7 @@ const Pencil = () => {
         <div className="flex justify-center items-center wide p-4 border-stone-300 border-[10px] shadow-stone-800 shadow-md">
           <img src={psc22} alt="" className="" />
         </div>
-        <div className="flex justify-center items-center wide p-4  border-stone-300 border-[10px] shadow-stone-800 shadow-md">
+        <div className="flex justify-center items-center wide p-4  border-stone-300 border-[10px] shadow-stone-800 shadow-md ">
           <img src={psc23} alt="" className="" />
         </div>
       </div>
