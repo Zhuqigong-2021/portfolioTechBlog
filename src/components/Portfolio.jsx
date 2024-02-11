@@ -57,7 +57,7 @@ const Portfolio = () => {
     },
     {
       projectDescription: "fullstack nextJs AI Chatbot study app",
-      git: "https://github.com/Zhuqigong-2021/ReactASP.net_coreSushiFullStack",
+      git: "https://github.com/Zhuqigong-2021/Study-Mate-For-Exam",
       imgUrl:
         "https://images.unsplash.com/photo-1542393545-10f5cde2c810?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fENvbXB1dGVyfGVufDB8fDB8fHww",
       go: "https://study-mate-for-exam.vercel.app",
